@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 1ST font "Josefin Sans" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<!-- 2nd font "Protest Guerrilla" -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- css rules -->
+ <!-- <style>
+ /* Base styling for body text */
+body {
+    background-color: #e9e9e9;
+    font-family: "Josefin Sans", sans-serif;
+    color: #333;
+}
+
+/* Header and Logo styling */
+header .Logo-img {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigation bar styling */
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Headings styling with alternate font */
+h1, h2 {
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+/* Main container styling */
+.Main-Container {
+    background-color: white;
+    width: 80%;
+    margin: -50px auto ;
+}
+
+ /* Text container styling */
+.txt-container-1 {
+    margin-top: 50px;
+    padding-left: 50px;
+    text-align: left;
+    margin-bottom: 50px;
+
+}
+
+
+.txt-container-1 h2{
+    margin-top: -50px
+}
+.txt-container-1 p{
+    margin-top: -15px;
+    font-size: 1.8em;
+}
+
+/* Content section styling */
+.Main-Container main .flex-content h1{
+    margin-bottom: 0px;
+}
+
+.Main-Container main .flex-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    column-gap: 20px; /* Adds space between columns */
+    padding: 20px;
+}
+
+
+
+.flex-content p {
+    font-size: 1.4em;
+}
+
+.Main-Container main .flex-content h1{
+    margin-bottom: 0px;
+}
+
+/* Image container styling */
+.image-containner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.Images img,
+.Images-2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.Images {
+    width: 50%;
+}
+
+
+.Images-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+}
+
+/* Author section styling */
+.Author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+
+.Author-txt {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Author-txt h2 {
+    margin-bottom: 10px;
+}
+
+
+.Author-txt p{
+    font-size: 0.7em;
+}
+
+
+.Author-img {
+    width: 200px;
+}
+
+
+.Author-img img {
+    border: solid 2px transparent;
+    border-radius: 50%;
+    width: 100%;
+}
+
+
+footer {
+    background-color: #14181d;
+    color: #ffffff;
+    text-align: center;
+    /* Standard spacings due to th Specefications */
+    margin-top: 50px;
+    padding: 50px;
+}
+
+
+ /* Media Queries */
+ 
+/* Responsive design: Desktop view */
+@media (min-width: 1024px) {
+
+    header nav ul li a{
+        font-size: 1.8em;
+    }
+    .Main-Container .txt-container-1 h1 {
+        font-size: 8.4em;
+    }
+    .Main-Container .txt-container-1 p{
+        font-size: 1.8em;
+    }
+    h2{
+        font-size: 3em
+    }
+    .Main-Container {
+        width: 75%;
+    }
+
+
+    .flex-content h1 {
+        font-size: 3em;
+    }
+
+    .flex-content p{
+        font-size: 1.5em;
+    }
+
+    .Main-Container .image-containner .Images-2 .row-images-2{
+        margin-top: -5px;
+    }
+
+    .Author{
+        gap: 50px;
+    }
+
+    .Author-txt {
+        width: 100%;
+    }
+
+
+    .Author-txt p{
+        font-size: 1.5em;
+    }
+
+    header .Logo-img img{
+        width: 200px;
+    }
+
+    .Author-img img {
+        margin-top: 50px;
+        width: 200px;
+    }
+
+    footer p{
+        font-size: 1.6em;
+    }
+}
+
+
+ /* Responsive design: Tablet view */
+ @media (min-width: 720px) and (max-width: 1024px){
+
+
+    header nav ul {
+        gap: 30px;
+    }
+
+    header nav ul li a{
+        font-size: 1.3em;
+    }
+
+    header .Logo-img img{
+        width: 80px;
+    }
+
+    .Main-Container{
+        width: 88%;
+    }
+
+    .txt-container-1{
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    .txt-container-1 h1{
+        font-size: 4em;
+    }
+
+
+    .txt-container-1 h2{
+        font-size: 3em;
+        margin-top: -30px;
+    }
+
+    .txt-container-1 p{
+        font-size: 1.6em;
+    }
+
+
+    .Main-Container{
+        text-align: center;
+        margin: 30px auto ;
+    }
+
+
+    .Main-Container h1{
+        font-size: 3em;
+    }
+    .Main-Container p{
+        text-align: start;
+    }
+
+
+    .Main-Container main .flex-content{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .flex-content p{
+        font-size: 1.3em;
+    }
+
+
+    .Images img{
+        display: none;
+    }
+
+
+    .Images-2{
+        flex-basis: content;
+        width: 100%;
+    }
+
+
+    .Images-2 img{
+        width: 100%;
+        }
+
+
+    .Author{
+        margin-top: 30px;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .Author .Author-txt h2{
+        font-size: 3em;
+    }
+    .Author .Author-txt p{
+        text-align: start;
+        float: left;
+        font-size: 1.1em;
+    }
+
+
+    .Author-img {
+        margin-top: 30px;
+    }
+
+
+  .Main-Container footer{
+        margin-top: 30px;
+        padding: 30px;
+    }
+
+
+    .Main-Container footer p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: .9em;
+    }
+ }
+
+/* Responsive design: Large mobile view */
+  @media (min-width: 540px) and (max-width: 720px){
+
+    header .Logo-img img{
+        width: 80px;
+    }
+
+    header nav{
+        padding-bottom: 5px;
+    }
+
+    header nav ul {
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    header nav ul li a{
+        font-size: 1.1em;
+    }
+
+
+    .txt-container-1{
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .txt-container-1 h1{
+        font-size: 4.7em;
+    }
+
+
+    .txt-container-1 h2{
+        font-size: 3.3em;
+        margin-top: 20px;
+    }
+
+    .txt-container-1 p{
+        font-size: 1.6em;
+    }
+
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+    .Main-Container{
+        width: 100%;
+        text-align: center;
+    }
+
+    .Main-Container h1{
+        font-size: 2.5;
+    }
+
+
+    .Main-Container p{
+        text-align: start;
+    }
+
+
+    .Main-Container main .flex-content{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .Main-Container main .flex-content .paragraphs p{
+        font-size: 1.3em;
+    }
+
+
+    .Images img{
+        display: none;
+    }
+
+
+    .Images-2{
+        display: flex;
+        flex-direction: column;
+        flex-basis: content;
+        width: 100%;
+    }
+
+
+    .Images-2 img{
+        width: 100%;
+        }
+
+
+    .Author{
+        margin-top: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .Author .Author-txt h2{
+        font-size: 2.5em;
+    }
+
+    .Author .Author-txt p{
+        text-align: start;
+        float: left;
+        font-size: 1.1em;
+    }
+
+
+    .Author-img {
+        margin-top: 20px;
+        img{
+            width: 80px;
+        }
+    }
+
+
+    .Main-Container footer{
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+
+    .Main-Container footer p{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       font-size: 1em;
+    }
+  }
+
+    /* Responsive design: Small mobile view */
+   @media (min-width: 360px) and (max-width: 540px){
+    header .Logo-img img{
+        width: 80px;
+        padding: 12px;
+    }
+
+    header nav{
+        margin-top: -12px;
+    }
+
+    header nav ul {
+        gap: 12px;
+        padding-inline-start: 0px
+    }
+
+
+    header nav ul li a{
+        font-size: 1.1em;
+    }
+
+
+    .Main-Container main  .txt-container-1{
+        text-align: center;
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+
+     .Main-Container main .txt-container-1 h1{
+        font-size: 3.6em;
+    }
+
+
+    .Main-Container main .txt-container-1 h2{
+        font-size: 3em;
+    }
+
+    .Main-Container main .txt-container-1 p{
+        font-size: 1.2em;
+    }
+
+     /* to ensure that the main container will take the full width  */
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .Main-Container{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .Main-Container main p{
+        text-align: start;
+        font-size: .9em;
+    }
+
+
+    .Main-Container main .flex-content{
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .Main-Container main .flex-content .paragraphs h1{
+        font-size: 3em;
+    }
+
+    .Main-Container main .flex-content .paragraphs p{
+        font-size: 1.1em;
+    }
+
+
+    .Images img{
+        display: none;
+    }
+
+
+    .Images-2{
+        display: flex;
+        flex-direction: column;
+        flex-basis: content;
+        width: 100%;
+    }
+
+
+    .Images-2 img{
+        width: 100%;
+        }
+
+
+    .Author{
+        margin-top: 12px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .Author .Author-txt h2{
+        font-size: 2.4em;
+    }
+    .Author .Author-txt p{
+        font-size: .9em;
+        text-align: start;
+        float: left;
+    }
+
+
+    .Author-img {
+        margin-top: 12px;
+        img{
+            width: 80px;
+        }
+    }
+
+
+    footer{
+        margin-top: 12px;
+        padding: 12px;
+    }
+
+
+    footer p{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       font-size: .7em;
+    }
+}
+ </style> -->
+</head>
+<body>
+    <header>
+        <!-- Logo image -->
+    <div class="Logo-img">
+        <img src="../Clone-Task-1/Images/logo.svg" alt="Logo-Image">
+    </div>
+
+
+    <!-- navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="#" style="text-decoration: none;">Our Blog</a></li>
+            <li><a href="#">Our Artists</a></li>
+            <li><a href="#">Our Story</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="Main-Container">
+        <main>
+            <div class="txt-container-1">
+                <!-- title of the page -->
+                 <h1>Erase Tapes:</h1>
+                <h2>Exploring the Sonic Frontier</h2>
+                <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Mi eu<br> 
+                scelerisque turpis posuere tempor? Leo condimentum himenaeos <br>
+                 molestie elit; maximus iaculis  proin nulla. Ullamcorper nibh<br>  
+                 cras conubia suscipit dapibus sagittis, facilisi habitant vivamus. <br>
+                 Etiam fusce posuere himenaeos ipsum commodo sollicitudin<br>
+                  himenaeos nec..</p>
+            </div>
+
+
+            <div class="flex-content">
+                <!-- main text content -->
+                 <div class="paragraphs">
+                    <h1>Heading</h1>
+                    
+                    <p>Montes ridiculus mus tellus nunc vulputate. Cras facilisi congue et facilisis porttitor litora etiam praesent porttitor. Sollicitudin cubilia scelerisque diam taciti lacus. Dapibus penatibus augue dapibus sagittis; rhoncus accumsan. Accumsan urna et, ultrices placerat justo rutrum. Tristique mattis ante cras accumsan convallis phasellus fermentum magna. Rhoncus curabitur pharetra proin ante nam adipiscing accumsan hac. Rutrum efficitur nullam integer ut ex id. Pulvinar vel at vestibulum vivamus sed nascetur eget. </p>
+
+
+                    <p> Laoreet volutpat hendrerit est aliquam; fusce quam tempor. Nisi interdum praesent pellentesque non non blandit cubilia et. Aptent maximus vehicula nullam odio tempor. Placerat dis facilisis potenti iaculis, primis vivamus nec at magnis. Aadipiscing curabitur vestibulum imperdiet dolor primis. Inceptos penatibus inceptos eu habitasse aptent vehicula platea litora congue. Ultricies mauris fringilla rhoncus pharetra iaculis vitae. Venenatis himenaeos eget molestie dignissim consectetur tellus litora. Porta a iaculis mi primis rhoncus. </p>
+                       
+                    <p> Curae habitasse elementum amet nunc, natoque at. Tortor vel blandit sociosqu auctor aliquam maximus porta feugiat. Eros phasellus platea mauris condimentum natoque hendrerit tellus id. Ex imperdiet vitae maximus adipiscing neque quam tempor orci. Lobortis porta lacinia cubilia tellus vel placerat; facilisis mi euismod. Neque eu orci nulla penatibus elit nec. </p>
+                       
+                    </div>
+                    
+                    <div class="paragraphs">
+                    <p> Parturient habitasse facilisis purus donec, enim platea maximus. Primis class varius augue sed class ultricies. Posuere curabitur tristique penatibus montes hac ac imperdiet. Risus per sociosqu, cursus leo condimentum ac fringilla. Nibh curabitur eros tempus nec; nam curae hendrerit. Mattis placerat maximus mollis praesent, eros adipiscing dui.  </p>
+                   
+                    <h1>Heading</h1>
+                    
+                    <p>Habitasse ornare fames facilisis montes pulvinar habitasse fringilla. Risus porta cursus duis vivamus quam adipiscing nec. Ante at posuere eget aptent natoque vivamus ante. Aenean enim dapibus viverra sem efficitur. Felis nam semper integer justo in. Facilisi augue urna torquent lacinia facilisi inceptos. Natoque varius feugiat massa scelerisque natoque, cras tempor inceptos. </p>                
+
+
+                    <p> Amet ac leo, imperdiet hac litora auctor. Suscipit congue duis sociosqu auctor euismod vivamus urna diam. Nunc enim himenaeos litora facilisi, tincidunt torquent. Eros sapien laoreet duis, volutpat rutrum pulvinar. Natoque semper sapien aptent quis habitant aliquam condimentum luctus. Tempus pellentesque congue varius dapibus pharetra. Fermentum diam auctor bibendum rhoncus leo. Vestibulum tincidunt fames convallis ligula semper porttitor. </p>
+                       
+                    </div>
+                    
+                    <div class="paragraphs">
+                    <p> Magnis maximus morbi, litora accumsan vivamus facilisi etiam pharetra. Platea congue orci sagittis purus scelerisque. Velit taciti maecenas praesent nam lobortis metus vehicula habitasse porttitor. Porta gravida placerat lobortis litora elit feugiat venenatis. Cras magna himenaeos consequat aliquet ad nec pharetra. Ligula eleifend imperdiet aptent primis placerat. Nec magnis tempus vulputate ipsum ad sagittis mus.</p>
+                    
+                    <h1>Heading</h1>
+                   
+                    <p>Vulputate nullam tempus montes eu tellus integer adipiscing pulvinar. Pharetra eu luctus id a potenti. Pulvinar egestas conubia ante varius lobortis iaculis metus. Netus sem imperdiet hendrerit vehicula netus est gravida tortor. Nunc ridiculus per montes nulla, facilisis lacinia per leo. Hendrerit scelerisque nulla in suspendisse sit tortor sagittis. Suscipit dictumst ipsum laoreet cras egestas suscipit orci. Per molestie felis erat platea blandit commodo.</p>
+
+
+                    <p> Ad venenatis sapien habitant posuere donec porttitor vel nisi. Sodales laoreet donec diam rhoncus lectus euismod orci torquent curae. Fames rhoncus torquent sed convallis; potenti cras. Dictumst arcu libero nulla malesuada mi ridiculus platea. Interdum ullamcorper fringilla himenaeos mollis; in arcu pharetra massa. Nunc mauris taciti montes sapien molestie orci ac quis</p>
+                    </div>
+            </div>
+
+
+        <div class="image-containner">
+                <!-- images grid -->
+            <div class="Images">
+                <img src="../Clone-Task-1/Images/all-encores.jpg" alt="">
+            </div>
+                <div class="Images-2">
+                <img src="../Clone-Task-1/Images/articulation.jpg" alt="">
+                <img src="../Clone-Task-1/Images/blurred.jpg" alt="">
+                <img class="row-images-2" src="../Clone-Task-1/Images/encores-2.jpg"  alt="">
+                <img class="row-images-2" src="../Clone-Task-1/Images/eulogy-for-evolution.jpg" alt="">
+           
+            </div>
+
+        </div>
+
+
+                <!-- Author section  -->
+            <div class="Author">
+                <div class="Author-txt">
+                    <h2>The Author</h2>
+                    <p>Sapien leo scelerisque per convallis torquent nunc. Lobortis eleifend a nam sit turpis nostra. Tempus suspendisse libero curae faucibus lobortis litora bibendum praesent! Eget quam magna, diam commodo interdum sapien magnis.Copyright © 2023 Erased Disks Ltd.</p>
+                </div>
+                 <!-- Author image -->
+                 <div class="Author-img">
+                    <img src="../Clone-Task-1/Images/profile_picture.jpg" alt="">
+                </div>
+            </div>
+            
+        </main>
+
+
+        <!-- footer -->
+        <footer>
+            <p>Copyright © 2023 Erased Disks Ltd.</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
+
+

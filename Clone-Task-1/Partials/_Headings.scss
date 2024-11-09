@@ -1,0 +1,49 @@
+/* Headings styling with alternate font */
+h1, h2 {
+    font-family: "Protest Guerrilla", sans-serif;
+}
+
+/* Main container styling */
+.Main-Container {
+    background-color: white;
+    width: 80%;
+    margin: -50px auto ;
+}
+
+ /* Text container styling */
+.txt-container-1 {
+    margin-top: 50px;
+    padding-left: 50px;
+    text-align: left;
+}
+
+
+.txt-container-1 h2{
+    margin-top: -50px
+}
+.txt-container-1 p{
+    margin-top: -15px;
+    font-size: 1.8em;
+}
+
+/* Content section styling */
+.Main-Container main .flex-content h1{
+    margin-bottom: 0px;
+}
+
+.Main-Container main .flex-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    column-gap: 20px; /* Adds space between columns */
+    padding: 0px 20px 20px 20px;
+}
+
+
+
+.flex-content p {
+    font-size: 1.4em;
+}
+
+.Main-Container main .flex-content h1{
+    margin-bottom: 0px;
+}

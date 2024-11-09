@@ -1,0 +1,443 @@
+// Desktop styles
+@include respond-to(desktop) {
+
+    header nav ul li a{
+        font-size: 1.8em;
+    }
+    .Main-Container .txt-container-1 h1 {
+        font-size: 8.4em;
+    }
+    .Main-Container .txt-container-1 p{
+        font-size: 1.8em;
+    }
+    h2{
+        font-size: 3em
+    }
+    .Main-Container {
+        width: 75%;
+    }
+
+
+    .flex-content h1 {
+        font-size: 3em;
+    }
+
+    .flex-content p{
+        font-size: 1.5em;
+    }
+
+    .Main-Container .image-containner .Images-2 .row-images-2{
+        margin-top: -5px;
+    }
+
+    .Author{
+        gap: 50px;
+    }
+
+    .Author-txt {
+        width: 100%;
+    }
+
+
+    .Author-txt p{
+        font-size: 1.5em;
+    }
+
+    header .Logo-img img{
+        width: 200px;
+    }
+
+    .Author-img img {
+        margin-top: 50px;
+        width: 200px;
+    }
+
+    footer p{
+        font-size: 1.6em;
+    }
+}
+
+
+@include respond-to(tablet){
+
+
+    header nav ul {
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+
+    header nav ul li a{
+        font-size: 1.3em;
+    }
+
+    header .Logo-img img{
+        width: 200px;
+    }
+
+    .Main-Container{
+        width: 88%;
+    }
+
+    .txt-container-1{
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+
+
+    .txt-container-1 h1{
+        font-size: 4em;
+    }
+
+
+    .txt-container-1 h2{
+        font-size: 3em;
+        margin-top: -30px;
+    }
+
+    .txt-container-1 p{
+        font-size: 1.6em;
+    }
+
+
+    .Main-Container{
+        text-align: center;
+    }
+
+
+    .Main-Container h1{
+        font-size: 3em;
+    }
+    .Main-Container p{
+        text-align: start;
+    }
+
+
+    .Main-Container main .flex-content{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        margin-top: -110px;
+    }
+
+    .flex-content p{
+        font-size: 1.3em;
+    }
+
+
+    .Images img{
+        display: none;
+    }
+
+
+    .Images-2{
+        flex-basis: content;
+        width: 100%;
+    }
+
+
+    .Images-2 img{
+        width: 100%;
+        }
+
+
+    .Author{
+        margin-top: 30px;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .Author .Author-txt h2{
+        font-size: 3em;
+    }
+    .Author .Author-txt p{
+        text-align: start;
+        float: left;
+        font-size: 1.1em;
+    }
+
+
+    .Author-img {
+        margin-top: 30px;
+    }
+
+
+  .Main-Container footer{
+        margin-top: 30px;
+        padding: 30px;
+    }
+
+
+    .Main-Container footer p{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: .9em;
+    }
+ }
+
+
+ @include respond-to(large-mobile){
+
+    header .Logo-img img{
+        width: 80px;
+    }
+
+    header nav{
+        padding-bottom: 5px;
+    }
+
+    header nav ul {
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    header nav ul li a{
+        font-size: 1.1em;
+    }
+
+
+    .txt-container-1{
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .txt-container-1 h1{
+        font-size: 4.7em;
+    }
+
+
+    .txt-container-1 h2{
+        font-size: 3.3em;
+        margin-top: 20px;
+    }
+
+    .txt-container-1 p{
+        font-size: 1.6em;
+    }
+
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+    .Main-Container{
+        width: 100%;
+        text-align: center;
+    }
+
+    .Main-Container h1{
+        font-size: 2.5;
+    }
+
+
+    .Main-Container p{
+        text-align: start;
+    }
+
+
+    .Main-Container main .flex-content{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        margin-top: -70px;
+    }
+
+    .Main-Container main .flex-content .paragraphs p{
+        font-size: 1.3em;
+    }
+
+
+    .Images img{
+        display: none;
+    }
+
+
+    .Images-2{
+        display: flex;
+        flex-direction: column;
+        flex-basis: content;
+        width: 100%;
+    }
+
+
+    .Images-2 img{
+        width: 100%;
+        }
+
+
+    .Author{
+        margin-top: 20px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .Author .Author-txt h2{
+        font-size: 2.5em;
+    }
+
+    .Author .Author-txt p{
+        text-align: start;
+        float: left;
+        font-size: 1.1em;
+    }
+
+
+    .Author-img {
+        margin-top: 20px;
+        img{
+            width: 80px;
+        }
+    }
+
+
+    .Main-Container footer{
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+
+    .Main-Container footer p{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       font-size: 1em;
+    }
+  }
+
+
+  @include respond-to(small-mobile){
+    header .Logo-img img{
+        width: 80px;
+        padding: 12px;
+    }
+
+    header nav ul {
+        gap: 12px;
+        padding-inline-start: 0px;
+        margin-top: 0px; 
+        padding-bottom: 12px;
+    }
+
+
+    header nav ul li a{
+        font-size: 1.1em;
+    }
+
+
+    .Main-Container main  .txt-container-1{
+        text-align: center;
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+
+
+     .Main-Container main .txt-container-1 h1{
+        font-size: 3.6em;
+    }
+
+
+    .Main-Container main .txt-container-1 h2{
+        font-size: 3em;
+    }
+
+    .Main-Container main .txt-container-1 p{
+        font-size: 1.2em;
+    }
+
+     /* to ensure that the main container will take the full width  */
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+
+    .Main-Container{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .Main-Container main p{
+        text-align: start;
+        font-size: .9em;
+    }
+
+
+    .Main-Container main .flex-content{
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .Main-Container main .flex-content .paragraphs h1{
+        font-size: 3em;
+    }
+
+    .Main-Container main .flex-content .paragraphs p{
+        font-size: 1.1em;
+    }
+
+
+    .Images img{
+        display: none;
+    }
+
+
+    .Images-2{
+        display: flex;
+        flex-direction: column;
+        flex-basis: content;
+        width: 100%;
+    }
+
+
+    .Images-2 img{
+        width: 100%;
+        }
+
+
+    .Author{
+        margin-top: 12px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+
+    .Author .Author-txt h2{
+        font-size: 2.4em;
+    }
+    .Author .Author-txt p{
+        font-size: .9em;
+        text-align: start;
+        float: left;
+    }
+
+
+    .Author-img {
+        margin-top: 12px;
+        img{
+            width: 80px;
+        }
+    }
+
+
+    footer{
+        margin-top: 12px;
+        padding: 12px;
+    }
+
+
+    footer p{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       font-size: .7em;
+    }
+}

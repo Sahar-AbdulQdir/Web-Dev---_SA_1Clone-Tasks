@@ -1,0 +1,16 @@
+// This partial is responsible for setting the mixins which releated to the media queries  
+
+// Media Query Mixins to handle the breakpoints
+@mixin respond-to($BreakPoints) {
+    @if $BreakPoints == small-mobile{
+        @media (min-width: 360px) and (max-width: 540px) { @content; }
+    }@else if $BreakPoints == large-mobile{
+      @media (min-width: 540px) and (max-width: 720px) { @content; }
+    }@else if $BreakPoints == tablet {
+      @media (min-width: 720px) and (max-width: 1024px) { @content; }
+    } 
+    @else if $BreakPoints == desktop {
+      @media (min-width: 1024px) { @content; }
+    }
+  }
+  

@@ -1,0 +1,45 @@
+        // This partial is responsible for designing the card container and the cards 
+
+        // Designing the card container
+        .Card-Container {
+            max-width: $Max-width;
+            margin: auto;
+            padding: $Large-desktop-spacing;
+            // displaying it as a one column grid ... 
+            // the first three cards will be adjusted in the  _MediaQ-specifications.scss
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: $Small-spacing;
+        }
+
+        .Card {
+            background-color: $white;
+            box-shadow: 0 4px 8px ;
+            transition: transform 0.3s;
+            width: 850px;
+            // adding shadow to the cards
+            box-shadow: 10px 10px 0px 1px $primary-light;
+            -webkit-box-shadow: 10px 10px 0px 1px $primary-light;
+            -moz-box-shadow: 10px 10px 0px 1px $primary-light;
+        }
+
+        // hover effect
+        .Card:hover {
+            transform: scale(1.02);
+        }
+
+        .Card h3 {
+            font-family: 'Teko', sans-serif;
+            color: $black;
+            margin: 8px 0;
+        }
+
+        .Card p {
+            font-size: $Movie-font-size;
+            color: $black;
+            margin: 8px 0;
+        }
+
+        .Card img {
+            width: 100%;
+        }

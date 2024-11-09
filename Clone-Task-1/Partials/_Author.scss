@@ -1,0 +1,38 @@
+/* Author section styling */
+.Author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+
+.Author-txt {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Author-txt h2 {
+    margin-bottom: 10px;
+}
+
+
+.Author-txt p{
+    font-size: 0.7em;
+}
+
+
+.Author-img {
+    width: 200px;
+}
+
+
+.Author-img img {
+    border: solid 2px transparent;
+    border-radius: 50%;
+    width: 100%;
+}

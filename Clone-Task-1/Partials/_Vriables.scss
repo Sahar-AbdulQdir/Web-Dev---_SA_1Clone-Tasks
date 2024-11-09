@@ -1,0 +1,31 @@
+// Colors
+$background-color: #e9e9e9;
+$content-background-color: #ffffff;
+$footer-background-color: #14181d;
+
+// Font Families
+$heading-font: 'Protest Guerrilla', sans-serif;
+$body-font: 'Josefin Sans', sans-serif;
+
+// Font Sizes
+$base-font-size: 16px;
+$heading-multiplier: 3; // Headings should be 3 times larger than base font
+$desktop-heading-title-size: 48px; // Adjusted for desktop title heading size
+$desktop-paragraph-size: 1.25rem; // Larger paragraph font size on desktop
+
+// Responsive Breakpoints
+$small-mobile-breakpoint: 360px;
+$large-mobile-breakpoint: 540px;
+$tablet-breakpoint: 720px;
+$desktop-breakpoint: 1024px;
+
+// Spacing
+$spacing-small-mobile: 12px;
+$spacing-large-mobile: 20px;
+$spacing-tablet: 30px;
+$spacing-desktop: 50px;
+
+// Image Sizes
+$author-photo-width: 200px;
+$logo-width-desktop: 200px;
+$logo-width-mobile: 80px;

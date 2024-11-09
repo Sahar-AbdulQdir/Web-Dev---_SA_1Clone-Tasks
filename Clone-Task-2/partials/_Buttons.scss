@@ -1,0 +1,27 @@
+// This partial is responsible for designing all the buttons 
+
+// Designing the buttons inside the cards
+.Card button {
+    font-family: 'Teko', sans-serif;
+    font-size: $Button-font-size;
+    background: $primary-light;
+    border: .1px solid $primary-light;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+// hover effect
+.Card button:hover {
+    background-color: $primary-light;
+}
+
+// Designing the button in the navigation bar
+header ul li button {
+    font-family: 'Teko', sans-serif;
+    border: .1px solid $primary-light;
+    padding: 8px 16px;
+    width: 150px;
+    background-color:$primary-light;
+}

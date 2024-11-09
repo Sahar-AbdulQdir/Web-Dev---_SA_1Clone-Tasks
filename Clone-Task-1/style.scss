@@ -1,0 +1,17 @@
+@import "./Partials/Header";
+@import "./Partials/Headings";
+@import "./Partials/Images";
+@import "./Partials/Author";
+@import "./Partials/Footer";         
+@import "./Partials/Mixins";
+@import "./Partials/MediaQ";
+
+
+//  /* Base styling for body text */
+
+
+ body {
+    background-color: #e9e9e9;
+    font-family: "Josefin Sans", sans-serif;
+    color: #333;
+}

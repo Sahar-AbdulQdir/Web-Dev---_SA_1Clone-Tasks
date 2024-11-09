@@ -1,0 +1,306 @@
+/* Header Styles */
+header {
+  background-color: #ffffff;
+  box-shadow: 0px 10px #eef36a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Teko", sans-serif;
+  padding: 16px;
+  box-shadow: 0px 10px 0px 1px #eef36a;
+  -webkit-box-shadow: 0px 10px 0px 1px #eef36a;
+  -moz-box-shadow: 0px 10px 0px 1px #231651;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  list-style: none;
+  margin: 0;
+  gap: 16px;
+  padding-inline-start: 10px;
+}
+
+header li:first-child {
+  font-size: 3em;
+  font-weight: bold;
+  background: linear-gradient(299deg, #ffffff, #eef36a, #4dccbd, #eef36a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 2s ease infinite;
+  margin-top: 0.8%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+header ul li nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 16px;
+  margin-top: 3%;
+}
+
+header ul li nav li:first-child {
+  color: #070410;
+  font-weight: normal;
+  margin-top: 0%;
+}
+
+.Card button {
+  font-family: "Teko", sans-serif;
+  font-size: 2em;
+  background: #4dccbd;
+  border: 0.1px solid #4dccbd;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: auto;
+}
+
+.Card button:hover {
+  background-color: #4dccbd;
+}
+
+header ul li button {
+  font-family: "Teko", sans-serif;
+  border: 0.1px solid #4dccbd;
+  padding: 8px 16px;
+  width: 150px;
+  background-color: #4dccbd;
+}
+
+.Card-Container {
+  max-width: 900px;
+  margin: auto;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+.Card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px;
+  transition: transform 0.3s;
+  width: 850px;
+  box-shadow: 10px 10px 0px 1px #4dccbd;
+  -webkit-box-shadow: 10px 10px 0px 1px #4dccbd;
+  -moz-box-shadow: 10px 10px 0px 1px #4dccbd;
+}
+
+.Card:hover {
+  transform: scale(1.02);
+}
+
+.Card h3 {
+  font-family: "Teko", sans-serif;
+  color: #070410;
+  margin: 8px 0;
+}
+
+.Card p {
+  font-size: 1.5em;
+  color: #070410;
+  margin: 8px 0;
+}
+
+.Card img {
+  width: 100%;
+}
+
+@media (min-width: 360px) and (max-width: 720px) {
+  header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  header ul li nav ul {
+    display: none;
+  }
+  header ul li button {
+    width: 130px;
+    font-size: 2em;
+  }
+  main .Card-Container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    padding: 0px;
+    margin-left: 15%;
+    margin-top: 15%;
+  }
+  main .Card-Container .Card {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  main .Card-Container .Card .Content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  main .Card-Container .Card .Content .txt h3 {
+    font-size: 1.5em;
+  }
+  main .Card-Container .Card .Content .txt p {
+    font-size: 1.5em;
+  }
+  main .Card-Container .Card .Content h3 {
+    font-size: 1.5em;
+  }
+  main .Card-Container .Card .Content p {
+    font-size: 1.5em;
+  }
+  main .Card-Container .Card .Content button {
+    font-size: 1.5em;
+    margin-top: auto;
+  }
+  main .Card-Container .Card .image img {
+    width: 270px;
+    height: 340px;
+  }
+  main .Card-Container .Card .Content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+}
+@media (min-width: 720px) and (max-width: 1024px) {
+  header ul {
+    padding-inline-start: 0px;
+  }
+  header ul li:first-child {
+    font-size: 3em;
+  }
+  header ul li nav ul li {
+    font-size: 2em;
+  }
+  header ul li nav ul li:first-child {
+    font-size: 2em;
+  }
+  header ul li button {
+    font-size: 2em;
+    width: 120px;
+  }
+  main .Card-Container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+  }
+  main .Card-Container .Card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  main .Card-Container .Card .Content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  main .Card-Container .Card .image img {
+    width: 300px;
+  }
+  main .Card-Container .Card .Content {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 1024px) {
+  header ul li nav ul li {
+    font-size: 3em;
+  }
+  header ul li nav ul li:first-child {
+    font-size: 3em;
+  }
+  .Card-Container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 48px;
+    gap: 48px;
+  }
+  .item-1 {
+    grid-column: 1/3;
+  }
+  .item-4 {
+    grid-column: 1/3;
+  }
+  .item-5 {
+    grid-column: 1/3;
+  }
+  .item-6 {
+    grid-column: 1/3;
+  }
+  main .Card-layout-1 {
+    display: flex;
+    flex-direction: column;
+  }
+  main .Card-Container .Card-layout-1 .image img {
+    width: 850px;
+    height: 370px;
+  }
+  main .Card-layout-1 .Content {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+  }
+  main .Card-layout-1 .Content button {
+    margin-left: 80px;
+    font-size: 2em;
+    width: 200px;
+  }
+  main .Card-layout-2 {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+  }
+  main .Card-layout-2 .image img {
+    width: 380px;
+    height: 200px;
+  }
+  main .Card-layout-2 .Content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  main .Card-layout-3 {
+    display: flex;
+    flex-direction: row;
+    height: 305px;
+  }
+  main .Card-layout-3 .image img {
+    width: 400px;
+    height: 305px;
+  }
+  main .Card-layout-3 .Content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  header ul li button {
+    font-size: 2em;
+    width: 320px;
+    height: 115px;
+  }
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(0deg, #4dccbd, #4dccbd 0%, #ffffff 65%, #4dccbd 100%);
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=Style.css.map */

@@ -1,0 +1,26 @@
+/* Image container styling */
+.image-containner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.Images img,
+.Images-2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.Images {
+    width: 50%;
+}
+
+
+.Images-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+}

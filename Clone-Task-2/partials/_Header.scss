@@ -1,0 +1,66 @@
+        // This partial is responsible for designing the navigation bar 
+
+
+        /* Header Styles */
+        header {
+            background-color:$white;
+            box-shadow: 0px 10px $accent-yellow;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            font-family: 'Teko', sans-serif;
+            padding:$Small-spacing;
+            // adding shadow
+            box-shadow: 0px 10px 0px 1px $accent-yellow;
+            -webkit-box-shadow: 0px 10px 0px 1px $accent-yellow;
+            -moz-box-shadow: 0px 10px 0px 1px $primary-dark;
+        }
+
+        header ul {
+            display: flex;
+            justify-content: space-between;
+            // insuring that the element will take the full space
+            flex-grow: 1;
+            list-style: none;
+            margin: 0;
+            gap: $Small-spacing;
+            padding-inline-start: 10px;
+        }
+
+
+        // Styling the "Watch.it"
+         header li:first-child {
+            font-size: $Header-desktop-font-size;
+            font-weight: bold;
+            // adding animated background to the text 
+            background: linear-gradient(299deg, $white, $accent-yellow, $primary-light, $accent-yellow);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientAnimation 2s ease infinite;
+            margin-top: .8%;
+        }  
+        
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+        // Styling the nested ul 
+        header ul li nav ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: $Small-spacing;
+            margin-top: 3%;
+        }
+        
+        header ul li nav li:first-child {
+          color: $black;
+          font-weight: normal;
+          margin-top: -0%;
+        }
+  
+

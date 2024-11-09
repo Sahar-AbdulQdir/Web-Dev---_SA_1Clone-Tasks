@@ -1,0 +1,15 @@
+// Importing the SASS files
+@import "./partials/variables";
+@import "./partials/Header";
+@import "./partials/Buttons";
+@import "./partials/Card";
+@import "./partials/Mixin";
+@import "./partials/MediaQ-specifications";
+
+// body font, gradient background and default css
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(0deg, $primary-light, $primary-light 0%, $white 65%, $primary-light 100%);
+    margin: 0;
+    padding: 0;
+}
