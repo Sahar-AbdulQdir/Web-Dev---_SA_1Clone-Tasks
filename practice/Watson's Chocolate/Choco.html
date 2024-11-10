@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>on scroll animation effects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+header {
+            background-image: url(Chocolate/Bg1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        nav {
+            background: #ffffff;
+            height: 90px;
+            display: flex;
+            justify-content: space-between; /* Align first three items left and last two items right */
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        /* Left and Right ULs */
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left li, .nav-right li {
+            list-style: none;
+            margin: 0 15px;
+            font-size: 25px;
+        }
+
+        .nav-right li{
+            margin: 0 20px;
+        }
+
+        /* Center Logo */
+        .logo img {
+            width: 195px;
+            margin-top: 60%;
+            margin-left: -15%;
+        }
+
+        /* Links Styling */
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000000;
+            font-size: 23px;
+            font-family: "Playball", system-ui;
+            font-weight: 700;
+            font-style: normal;
+        }
+            .text{
+                color: #000000;
+                float: left;
+                margin-left: 4%;
+                display:block;
+                margin-top: -5%;
+                font-size: larger;
+                h2{
+                    font-size: 2.2em;
+                    font-family: "Playball", system-ui;
+                    font-weight: 400;
+                    font-style: normal;
+                    margin-top: 50%;
+                }
+                h1{
+                    font-size: 4.8em;
+                    background: linear-gradient(to right, #84fff7 0%, #ff84da 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+                }
+                h3{
+                    margin-top: 5%;
+                    font-size: 1.3em;
+                    line-height: 120%;
+                    font-family: "Playball", system-ui;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+            }
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  box-sizing: border-box;
+  width: 105%; /* Set to 100% of the container */
+}
+
+/* Set a style for all buttons */
+.BTN {
+  background-color: #f6a6c1;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: solid 1px rgba(0, 128, 0, 0);
+  border-radius: 25px;
+  cursor: pointer;
+  width: 105%; /* Set to 100% of the container */
+}
+
+.BTN:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: 105%; /* Set to 100% for consistency */
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px;
+  position: relative;
+}
+
+.imgcontainer:hover{
+    transform: translate(0px, 0px) scale(1.1, 1.1);
+}
+
+img.avatar {
+  width: 50%;
+  border-radius: 25px;
+}
+
+.form {
+  margin: 0 auto; /* Center the form */
+  max-width: 400px; /* Set a max-width for better layout control */
+}
+
+.form-container {
+  padding: 16px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto; /* Center the container */
+  max-width: 600px; /* Set max-width to prevent stretching */
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  padding-top: 60px;
+  display: none;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* Centered */
+  border: 1px solid #888;
+  border-radius: 25px;
+  width: 80%; /* Responsive width */
+  max-width: 600px; /* Set a max-width for large screens */
+  padding: 20px; /* Add some padding for better spacing */
+  position: relative;
+  left: -200px;
+  top: 220px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 20px; /* Align to the right */
+  top: 10px;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(248, 121, 121);
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.form-animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    width: 90%; /* Make modal more responsive for smaller screens */
+  }
+}
+section {
+    align-items: center;
+    overflow: hidden;
+}
+
+.sec2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+.sec2-container {
+    display: flex;
+    justify-content: space-between; /* Align items in the container */
+    align-items: center;
+    width: 80%; /* Adjust the width as needed */
+}
+
+.sec2 img {
+    width: 55%; /* Adjust the width of the image */
+    margin-left: -7%;
+    margin-top: -10%;
+}
+
+.sec2-text {
+    h1{
+        background: linear-gradient(to right, #2dd8cd 0%, #ef59c2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    color: rgb(0, 0, 0);
+    width: 45%; /* Adjust the width of the text container */
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+}
+
+.sec2 h1 {
+    margin-bottom: 20px; /* Add some margin to separate from paragraph */
+}
+
+.sec2 h3{
+    font-family: "Playball", system-ui;
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+.sec3 {
+    background-color: white;
+    .promo-hero {    
+    height: 40vh;
+    background-image: url('Chocolate/sauce-2.jpg');
+    background-size: cover;
+    background-repeat:round;
+    width: 100%;
+    color: white;
+    padding: 2rem;
+    padding-top: 7%;
+    text-align: center;
+    button{
+        background-color: #ffffff;
+    }
+}
+ 
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon {
+  --f: .5em; /* control the folded part */
+  
+  position: relative;
+  top: -85px;
+  left: -25px;
+  width: 400px;
+  line-height: 1.8;
+  padding-inline: 1lh;
+  padding-bottom: var(--f);
+  border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+  clip-path: polygon(
+    100% calc(100% - var(--f)),100% 100%,calc(100% - var(--f)) calc(100% - var(--f)),var(--f) calc(100% - var(--f)), 0 100%,0 calc(100% - var(--f)),999px calc(100% - var(--f) - 999px),calc(100% - 999px) calc(100% - var(--f) - 999px));
+  transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
+  transform-origin: 100% 100%;
+  background-color: #7F1D1Dff; /* the main color  */
+}
+
+.promotions {
+    padding: 2rem;
+    background-color: white;
+    margin-top: 3%;
+}
+
+.promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.promo-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.promo-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translate(0px, 0px) scale(1.1, 1.1);
+}
+
+.promo-card img {
+    max-width: 60%;
+    margin-top: -3%;
+    height: auto;
+}
+
+.promo-card .strike {
+    text-decoration: line-through;
+    color: red;
+}
+
+button {
+    margin-top: 2%;
+    background-color: #ffc2c3;
+    color: #000000;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Limited Time Offers Section */
+.limited-time {
+    margin-top: 3%;
+    background-color: #ffffff;
+    padding: 2rem; /* Reduce padding */
+    text-align: center;
+    /* display: flex; */
+    width: 100%;
+    height: 10%;
+    /* flex-direction: row; */
+    display: block;
+    align-items: center;/* Align items vertically */
+
+}
+
+.limited-offer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Align items horizontally */
+    align-items: center; /* Align items vertically */
+    gap: 1rem; /* Add space between elements */
+}
+.limited-offer img {
+    width: 40%; /* Adjust the image size */
+    /* filter: drop-shadow(-30px 29px 0px hsla(180, 1%, 35%, 0.104)); */
+}
+
+.limited-offer-txt{
+    display: block;
+}
+
+.limited-offer-txt h3 {
+    margin-bottom: 10px; /* Add space between the heading and the paragraph */
+}
+
+.limited-offer-txt p {
+    margin-bottom: 15px; /* Add space between the paragraph and the button */
+}
+
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .promotion-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .countdown {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+}
+
+.sec4 {
+    padding: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 210px;
+    background-color: #ffffff;
+    img{
+        width: 45%;
+    }
+
+    h2{
+        font-size: 1.5rem;
+        background: linear-gradient(to right, #610303 0%, #FF1313 50%, #E7E7E7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p{
+        font-family: "Playball", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    }
+    input[type=text], select, textarea {
+  padding: 12px;
+  border: 1px solid #ad1e21;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #ad1e21;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #d2963a;
+}
+
+.form-container {
+    border-radius: 5px;
+  background-color: #ffffff00;
+  margin: 0px;
+  padding: 0%;
+  flex-grow: 1;
+}
+
+form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+}
+
+
+h1 {
+    font-size: 90px;
+}
+
+.sec5{
+    background-color: #4c2d09;
+    padding: 0.5%;
+}
+.sec5 p{
+    color: #fefefe;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+
+/* scrolling styles */
+section .animate {
+    opacity: 0;
+    filter: blur(5px);
+    transition: 0.5s;
+}
+
+section.show-animate .animate {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+.sec2 .animate {
+    transform: translateX(100%);
+}
+
+.sec2.show-animate .animate {
+    transform: translateX(0);
+}
+
+.sec3 .animate {
+    transform: scale(0.7);
+}
+
+.sec3.show-animate .animate {
+    transform: scale(1);
+}
+
+.sec4 .animate {
+    transform: rotate(30deg);
+}
+
+.sec4.show-animate .animate {
+    transform: rotate(0deg);
+}
+
+.sec5 .animate {
+    transform: translateX(100%) rotate(-90deg);
+}
+
+.sec5.show-animate .animate {
+    transform: translateX(0) rotate(0deg);
+}
+
+p.animate {
+    transition-delay: 0.2s;
+}
+
+
+@media screen and (max-width: 1000px) {
+    header{
+        background-size: 900px 90vh;
+    }
+    header{
+        h1, h2, h3{
+         font-size: x-small;           
+        }
+    }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-left">
+                <li><a href="Choco.html">Home</a></li>
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+                
+            </ul>
+
+            <div class="logo">
+                <img src="Chocolate/ChocoLogo..png" alt="Logo">
+            </div>
+
+            <ul class="nav-right">
+                <li>
+                    <a href="Chocolate-Box.html">
+                        <li><a href="Chocolate-Box.html"><img width="64" height="64" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/external-chocolate-box-baking-and-bakery-icongeek26-glyph-icongeek26.png" alt="external-chocolate-box-baking-and-bakery-icongeek26-glyph-icongeek26"/></a></li>
+                    </a>
+                </li>
+                <li>
+                    <button class="BTN" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                    <div id="id01" class="modal">
+                        <form class="modal-content form-animate" action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <img src="Chocolate/Poster.png" alt="Avatar" class="avatar">
+                            </div>
+
+                            <div class="form-container">
+                                <input type="text" placeholder="Enter your username" name="username" required>
+                                <input type="password" placeholder="Enter your password" name="password" required>
+                                <button type="submit" class="BTN">Login</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="text">
+        <h2>Best chocolate you'll taste</h2>
+        <h1>Watson's <br>
+             Chocolate</h1>
+        <h3>Where Tradition Meets Innovation,<br>
+             Crafting Exquisite Flavors to Indulge <br>
+              Your Senses and Sweeten Every Moment.</h3>
+        </div>
+
+    </header>
+
+<section id="About" class="sec2">
+    <div class="sec2-container">
+        <img src="Chocolate/chocolate-cake.png" alt="" class="animate" style="filter: drop-shadow(-30px 29px 0px #4affd584); ">
+        <div class="sec2-text">
+            <h3 class="animate">Welcome to Watsons Chocolate</h3>
+            <h1 class="animate">About Us</h1>
+            <p class="animate">Where passion meets perfection! We are dedicated to crafting exquisite chocolates using the finest cocoa beans sourced from sustainable farms worldwide. <br>
+                At Watsons Chocolate, we believe chocolate is an experience.<br>   
+                Join us on our sweet journey and indulge in the magic of chocolate, one delicious bite at a time!</p>
+        </div>
+    </div>
+</section>
+
+
+    <section class="sec3 animate" >
+    <!-- Hero Banner for Promotions -->
+    <section class="promo-hero animate">
+        <h2 >Special Chocolate Deals</h2>
+        <p >Check out our latest promotions and exclusive deals!</p>
+        <button >Shop Now</button>
+    </section>
+
+    <!-- Featured Promotions Section -->
+    <section class="promotions animate">
+        <h2>Featured Promotions</h2>
+        <div class="promotion-grid">
+            <div class="promo-card">
+                <img src="Chocolate/chocolate-cake.png" alt="Luxury Chocolate Box">
+                <h3>Luxury Chocolate Box</h3>
+                <p>Original Price: <span class="strike">$50</span></p>
+                <p>Sale Price: $35</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="promo-card">
+                <img src="Chocolate/dessert.png" alt="Assorted Dark Chocolates">
+                <h3>Assorted Dark Chocolates</h3>
+                <p>Original Price: <span class="strike">$30</span></p>
+                <p>Sale Price: $25</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="promo-card">
+                <img src="Chocolate/Eclair.png" alt="Assorted Dark Chocolates">
+                <h3>Assorted Dark Chocolates</h3>
+                <p>Original Price: <span class="strike">$30</span></p>
+                <p>Sale Price: $25</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Limited-Time Offers Section -->
+
+    <section class="limited-time"> 
+             <div class="timer"></div>
+            <p>Hurry! This deal ends in:</p>
+            
+            <div class="countdown">
+                
+                <span id="days">02</span> Days
+                <span id="hours">12</span> Hours
+                <span id="minutes">45</span> Minutes
+                <span id="seconds">30</span> Seconds
+            </div>
+        </div>
+<div class="ribbon">Limited-Time Offers</div>
+        <div class="limited-offer animate">
+            
+            <img class="animate" src="Chocolate/offer-img.png" alt="Limited Edition Box">
+            <div class="limited-offer-txt animate">
+            <h3>Limited Edition Box</h3>
+            <p>Now Only: $40</p>
+            <button>Buy Now</button>
+        </div>
+        </div>
+    </section>
+    </section>
+
+    <section id="Contact" class="sec4 animate">
+
+        <img src="Chocolate/contact-22.png" class="animate" alt="">
+        <div class="form-container">
+            <h2>Conatct Us</h2>
+            <p>Got questions about our chocolates or need help with an order? We'd love to hear from you! Reach out anytime, and we'll make your chocolate experience as sweet as can be. </p>
+            <form class="animate" action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
+    </section>
+
+    <section class="sec5">
+       <p> copyright reserved &copy; Watson's Chocolate 1996</p>
+    </section>
+    
+
+        <script>
+        // Modal display logic
+        const modal = document.getElementById('id01');
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Show/hide modal
+        document.querySelector(".BTN").onclick = function () {
+            modal.style.display = "block";
+        };
+
+        // Close modal on close button click
+        document.querySelector(".close").onclick = function () {
+            modal.style.display = "none";
+        };
+
+            let sections = document.querySelectorAll('section');
+    
+    window.onscroll = () => {
+        sections.forEach(sec => {
+            let scrollDistance = window.scrollY;
+            let secDistance = sec.offsetTop;
+    
+            if(scrollDistance >= secDistance - 150) {
+                sec.classList.add('show-animate');
+            }
+            else {
+                sec.classList.remove('show-animate');
+            }
+        })
+    }
+
+
+            // Set the date we're counting down to
+let countDownDate = new Date("Oct 5, 2024 12:00:00").getTime();
+
+// Update the countdown every 1 second
+let x = setInterval(function() {
+    let now = new Date().getTime();
+    let distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes, and seconds
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the corresponding spans
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // If the countdown is finished, clear the interval and display "EXPIRED"
+    if (distance < 0) {
+        clearInterval(x);
+        document.querySelector(".countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+<style>
+  body{
+    background-color: #f5f9ff;
+  }
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu header header header header header'
+    'menu main  main main main right'
+    'menu footer  footer footer footer right';
+  gap: 1px;
+  background-color: #f5f9ff;
+}
+
+.grid-container > div {
+  /* padding: 10px 0; */
+  border: 1px solid rgb(166, 166, 166);
+}
+
+.item1{
+    font-weight: 700;
+    font-size: 1.7em;
+    float: left !important;
+    /* margin-left: 2%; */
+    padding: 2%;
+    /* background-color: #ffffff; */
+}
+
+.item2 {
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #c0e2f9;
+  /* background-color: #ffffff; */
+  height: auto;
+  margin: 0;
+}
+
+.item2 ul {
+  padding: 0;
+}
+
+.item2 li {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.item2 a {
+  font-size: 20px;
+  text-decoration: none;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.item2 a:hover {
+  background-color: #c0e2f9;
+  border-radius: 5px 35px 35px 5px;
+  border: 2px solid #ffffff;
+  color: #000000;
+}
+
+/* Styling the activities section */
+.item3{
+    text-align: center;
+    padding: 2%;
+    /* background-color: rgb(255, 255, 255); */
+    
+    table.Table {
+  width: 100%;
+  background-color: #ffffff00;
+  border-collapse: collapse;
+
+  color: #000000;
+  
+}
+
+table.Table td, table.Table th {
+  /* border-width: 2px;
+  border-color: #F8F8F8;
+  border-style: solid; */
+  padding: 5px;
+}
+
+table.Table thead {
+  background-color: #1d99f8;
+}
+
+}
+
+
+
+.item4{
+    text-align: center;
+    /* background-color: rgb(255, 255, 255); */
+    padding: 3%;
+    align-items: center;
+}
+
+.iframe{
+  display: flex;
+  flex-direction: column;
+  margin-left: 27%;
+}
+
+/* Styling the notification section */
+.item5 {
+  font-size: 25px;
+  text-align: center;
+  /* background-color: #ffffff; */
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.item5 h1 {
+  font-size: 24px;
+  color: rgb(6, 2, 68);
+  margin-bottom: 15px;
+}
+
+.notifications {
+  text-align: left;
+  font-size: 18px;
+  padding: 0 20px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #bfe7f9;
+  border-radius: 5px;
+  color: #333;
+}
+
+.notification-item i {
+  color: green;
+}
+
+.notification-item p {
+  margin: 0;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="item1">Dashboard</div>
+  <div class="item2">
+    <ul>
+      <li><a href="Dashboard.html">Home</a></li>
+      <li><a href="Grid-layout.html">Grid-Layout</a></li>
+      <li><a href="Image-Gallery.html">Image Gallery</a></li>
+    </ul>
+  </div>
+  
+  <div class="item3">
+    <h1>Recent Activities</h1>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+    padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+    border-radius: 8px; will-change: transform;">
+     <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+       src="https://www.canva.com/design/DAGStLMZTe0/UJt2U-vPD6U506nRLQWuLQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+     </iframe>
+   </div>
+
+   <table class="Table">
+    <thead>
+      <tr>
+        <th>Assignment</th>
+        <th>Submited</th>
+        <th>Not Submited</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Math Project</td>
+        <td><i class="fa fa-check" style="font-size:36px"></i></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>History Board</td>
+        <td></td>
+        <td><p style="font-size:36px "> &#x2716; </p></td>
+      </tr>
+      <tr>
+        <td>English Research</td>
+        <td><i class="fa fa-check" style="font-size:36px"></i></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Generated at CSSPortal.com -->
+  
+  
+  </div>
+  
+  <div class="item4">
+    <h1>Avg Subjects Score</h1>
+    <div class="iframe">
+      <div style="position: relative; width: 65%; height: 0; padding-top: 65%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGSteYXmdw/h2-mbTEj6rXUAOf2287pYA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+
+    
+
+    <div style="position: relative; width: 65%; height: 0; padding-top: 65%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGSt9p333c/h8spZ6pTDCz4GLQktZU8cQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+
+  
+
+<div style="position: relative; width: 65%; height: 0; padding-top: 65%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGSt8jxnVM/u887O8e_nB1nkqlGHiY1pA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+
+
+<div style="position: relative; width: 65%; height: 0; padding-top: 65%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGSt2mpBTk/jkz97e1s6XHysNnCB1j-Aw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+
+
+<div style="position: relative; width: 65%; height: 0; padding-top: 65%;
+ padding-bottom: 0; margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGSt5-dPnY/Wr5q5OiKQNV5zi-c-NeIOw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+
+
+
+
+</div>
+
+</div>
+
+<div class="item5">
+  <h1>Notifications</h1>
+  <div class="notifications">
+    <div class="notification-item">
+      <p>Math Project submitted on time! <strong>Well done!</strong></p>
+      <i class="fa fa-check"></i>
+    </div>
+    <div class="notification-item">
+      <p>History Board is overdue. Please submit ASAP.</p>
+      <i class="fa fa-exclamation-circle" style="color: red;"></i>
+    </div>
+    <div class="notification-item">
+      <p>New Quiz added for Flexbox module.</p>
+      <i class="fa fa-info-circle" style="color: blue;"></i>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

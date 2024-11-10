@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: #E6E6E6ff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns:1fr; 
+            grid-template-rows: auto;
+        }
+
+        .sidebar {
+            border-radius: 5px;
+            border: 2px solid #000000;
+            background-color: #000000;
+            height: auto; 
+            margin: 0; 
+        }
+
+        .sidebar ul {
+            padding: 0; 
+        }
+
+        .sidebar li {
+            list-style: none;
+            margin: 0; 
+            padding: 10px;
+        }
+
+        .sidebar a {
+            font-size: 20px;
+            text-decoration: none;
+            display: block;
+            color: aliceblue;
+            text-align: center; 
+        }
+
+        .sidebar a:hover {
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px 35px 35px 5px;
+            border: 2px solid #ffffff;
+            color: #000000;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        .header {
+            padding: 10px;
+            background: url('Grid1/mountain11.avif') no-repeat center center;
+            background-size: cover;
+            clip-path: polygon(50% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+            height: 50vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        .header h1, .header h3 {
+            color: #ffffff;
+            text-align: center;
+            margin: 0; /
+        }
+
+        .header h1 {
+            font-size: 3em; 
+        }
+
+        .header h3 {
+            font-size: 0.5em; 
+            margin-top: 20px;
+        }
+
+        .D1 {
+            color: #000000;
+            text-align: center;
+            font-size: 1.5em; 
+        }
+
+        .D2 {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            margin: 20px 0; 
+        }
+
+        .Dcolomn1, .Dcolomn2 {
+            flex: 1 1 300px; 
+            margin: 10px; 
+            text-align: center; 
+        }
+
+        .content img {
+            width: 100%; 
+            max-width: 300px; 
+            margin: 20px auto; 
+            display: block; 
+        }
+
+        .img-grid {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 5%; 
+            margin-left: 5%;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 15px; 
+            width: 250px; 
+            text-align: center; 
+            transition: transform 0.2s; 
+        }
+
+        .card:hover {
+            transform: scale(1.05); 
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 155px; 
+        }
+
+        .img-grid img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 155px;
+        }
+
+        /* responsiveness */
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 15% 85%; 
+            }
+
+            .sidebar {
+                height: auto; 
+            }
+
+            .header {
+                height: 60vh; 
+            }
+
+            .header h1 {
+                font-size: 4em; 
+            }
+
+            .header h3 {
+                font-size: 2em; 
+            }
+
+            .D1 {
+                font-size: 2em; 
+            }
+
+            .img-grid {
+                justify-content: flex-start; 
+            }
+        }
+
+        .D3 {
+    display: block;
+    background: url('Grid1/mountains-4671122_1280.jpg') no-repeat top left;
+    background-size: cover; 
+    min-height: 400px; 
+
+
+}
+
+.D3 h1, .D3 h3 {
+    margin-left: 2%;
+    font-size: 25px;
+}
+
+.D3 p {
+    font-size: 20px; 
+    margin-left: 2%;
+    color: rgb(0, 0, 0);
+}
+
+
+.D3-txt {
+    border-radius: 25px;
+    border: 2px solid transparent; 
+    border-bottom: 5px solid #b4b5b76f; 
+    background-color: #b4b5b76f;
+    padding: 15px; 
+    position: relative;
+    top: 50px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="sidebar">
+            <ul>
+                <li><a href="Dashboard.html">Home</a></li>
+                <li><a href="Grid-layout.html">Grid-Layout</a></li>
+                <li><a href="Image-Gallery.html">Image Gallery</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <h1>Discover Hidden Places In Switzerland</h1>
+                <h3>The Travel Companies That Will Change The Way You See The World</h3>
+            </div>
+
+            <div class="D1">
+                <h2>Luxury Tailor-Made Holidays from Original Travel</h2>
+                <h4>At Original Travel we believe that life is in the detail</h4>
+            </div>
+
+            <div class="D2">
+                <div class="Dcolomn1">
+                    <h4>For instance, the emphasis is on flexibility and personalisation across <br>
+                        a range of authentic experiences in Africa, Asia, Latin America, and Canada.</h4>
+                </div>
+
+                <div class="Dcolomn2">
+                    <h4>Designing each holiday around a client’s needs and preferences, <br>
+                        the result is an individually-created itinerary which is big on imagination and catered around each individual's interests.</h4>
+                </div>
+            </div>
+
+            <img src="Grid1/logo.png" alt="">
+
+            <div class="img-grid">
+                <div class="card">
+                    <img src="Grid1/Canada1.avif" alt="">
+                    <h2><strong>01</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus est consectetur officia earum, a periam nulla, quia enim praesentium dolore, perferendis fuga architecto ipsa natus maiores nihil vitae dolores in vel?</p>
+                </div>
+                <div class="card">
+                    <img src="Grid1/Canada2.avif" alt="">
+                    <h2><strong>02</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus est consectetur officia earum, a periam nulla, quia enim praesentium dolore, perferendis fuga architecto ipsa natus maiores nihil vitae dolores in vel?</p>
+                </div>
+                <div class="card">
+                    <img src="Grid1/Canada4.avif" alt="">
+                    <h2><strong>03</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus est consectetur officia earum, a periam nulla, quia enim praesentium dolore, perferendis fuga architecto ipsa natus maiores nihil vitae dolores in vel?</p>
+                </div>
+                <div class="card">
+                    <img src="Grid1/Canada3.avif" alt="">
+                    <h2><strong>04</strong></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus est consectetur officia earum, a periam nulla, quia enim praesentium dolore, perferendis fuga architecto ipsa natus maiores nihil vitae dolores in vel?</p>
+                </div>
+            </div>
+
+            <div class="D3">
+
+                <div class="D3-txt">
+                <h1>Where to go?</h1><br>
+                <h3>Explore the world to find the destination of your choice.</h3>
+                <p>Guests can celebrate a milestone birthday with their own private camp <br>
+                        and DJ on a glacier in Iceland, indulge in a gastronomic tour of the Douro Valley, or connect <br>
+                        with each other better through the power of storytelling in the Botswana bush. Parents can connect <br>
+                        with their teenage children while making their own feature-length wildlife documentary with a filmmaker <br>
+                         in Kenya, or seek replenishment upon crystal-clear waters during a fortnight’s sailing trip across the Indian Ocean.</p>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

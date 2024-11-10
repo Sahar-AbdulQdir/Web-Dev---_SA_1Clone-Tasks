@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List (Static)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8eeee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           font-family: "Playball", cursive;
+           font-weight: 400;
+           font-style: normal;
+
+
+        }
+
+        .InputContainer {
+            width: 360px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+            border-radius: 30px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+        }
+
+        .input {
+            width: 340px;
+            height: 40px;
+            border: none;
+            outline: none;
+            caret-color: rgb(255, 81, 0);
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            padding-left: 15px;
+            letter-spacing: 0.8px;
+            color: rgb(19, 19, 19);
+            font-size: 13.4px;
+        }
+
+        .container {
+            padding: 20px;
+            background: linear-gradient(50deg, rgba(255, 255, 255, 0.4) 12%, rgba(255, 255, 255, 0.1) 77%);
+            box-shadow: 0px 4px 24px 1px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .task {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .task-label{
+            float: left !important;
+            margin-right: 65%;
+        }
+
+     
+        .custom-checkbox {
+            position: relative;
+            padding-left: 1.5em;
+            cursor: pointer;
+        }
+
+        .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.5em;
+            width: 1.5em;
+            border: 2px rgb(255, 255, 255) solid;
+            border-radius: 9px;
+            background-image: linear-gradient(45deg, #e3b1e9, #f1e3d7, #c0e8da);
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .custom-checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .custom-checkbox .checkmark:after {
+            left: 0.45em;
+            top: 0.25em;
+            width: 0.25em;
+            height: 0.5em;
+            border: solid rgb(255, 255, 255);
+            border-width: 0 0.15em 0.15em 0;
+            transform: rotate(45deg);
+        }
+
+        .delete-btn {
+            border-radius: 9px;
+            padding: 10px 20px;
+            background-image: linear-gradient(45deg, #f8e7fa, #fbf6e7, #e6fcf5);
+            border: none;
+            box-shadow: rgba(139, 18, 113, 0.2) 0px 8px 24px;
+            cursor: pointer;
+            font-size: 13px;
+            color: rgb(50, 50, 50);
+            transition: all 0.3s ease;
+        }
+
+        .delete-btn:hover {
+            background-image: linear-gradient(45deg, #f3d5f7, #ffe3e3, #e6fce0);
+            box-shadow: rgba(139, 18, 113, 0.4) 0px 10px 30px;
+            color: #fff; 
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="InputContainer">
+            <input placeholder="Add task from here" id="input" class="input" name="text" type="text">
+        </div>
+        <ul>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 1</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 2</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 3</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 4</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 5</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 6</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 7</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 8</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+            <li class="task">
+                <label class="custom-checkbox">
+                    <input type="checkbox" class="task-checkbox">
+                    <div class="checkmark"></div>
+                </label>
+                <label class="task-label">Task 3</label>
+                <button class="delete-btn">Delete</button>
+            </li>
+
+        </ul>
+    </div>
+</body>
+</html>

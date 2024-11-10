@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart with Item Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+ body {
+            font-family: Arial, sans-serif;
+        }
+    .BG{
+        background-image: url(Chocolate/Choco-Box-BG1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    nav {
+            background: #ffffff;
+            height: 90px;
+            display: flex;
+            /* Align first three items left and last two items right */
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0 50px;
+        }
+
+        /* Left and Right ULs */
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left li, .nav-right li {
+            list-style: none;
+            margin: 0 15px;
+            font-size: 25px;
+        }
+
+        .nav-right li{
+            margin: 0 20px;
+        }
+
+        /* Centering the Logo */
+        .logo img {
+            width: 165px;
+            margin-top: 60%;
+            margin-left: -40%;
+        }
+
+        /* Links Styling */
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #000000;
+            font-size: 23px;
+            font-family: "Playball", system-ui;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .text{
+                color: #000000;
+                float: left;
+                margin-left: 4%;
+                display:block;
+                margin-top: -15%;
+                font-size: larger;
+                h2{
+                    font-size: 2.2em;
+                    font-family: "Playball", system-ui;
+                    font-weight: 400;
+                    font-style: normal;
+                    margin-top: 50%;
+                }
+                h1{
+                    font-size: 4.2em;
+                    color: #ffffff !important;
+                }
+                button{
+                    /* margin-top: -5%; */
+                    border: solid 1px #805408;
+                    background-color: #805408;
+                    border-radius: 25px;
+                    padding: 3%;
+                    a{
+                        color: #ffffff;
+                        text-decoration: none;
+                        font-size: 20px;
+                        font-family: "Playball", system-ui;
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+                }
+
+                button:hover{
+                    background-color: #49230b;
+                }
+
+            }
+
+            .Strip {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 10vh; 
+}       
+
+.Strip h1 {
+    font-size: 2.5em;
+    font-family: "Playball", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 0; 
+}
+.container {
+    background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 7px, transparent 7px) 0% 0%/16px 16px no-repeat,
+        radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px) 100% 0%/16px 16px no-repeat,
+        radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px) 0% 100%/16px 16px no-repeat,
+        radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100% 100%/16px 16px no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 18px) calc(100% - 32px) no-repeat,
+        linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 32px) calc(100% - 18px) no-repeat,
+        linear-gradient(18deg, #f4ffbf 0%, #94fff6 100%);
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto;
+    grid-column-gap: 1px; 
+    grid-row-gap: 1px; 
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 150px; 
+}
+
+        .card {
+
+            padding: 2px 25px 2px 25px;
+            width: 200px;
+            text-align: center;
+        }
+        .card button{
+            border-radius: 25px;
+            border: solid 1px #acaaaa00;
+            padding: 7%;
+            background-color: #bfffe2e2;
+        }
+
+        .card button:hover{
+            background-color: #e8e8e8;
+        }
+        .card img {
+
+            filter: drop-shadow(0px 8px 15px #000000);
+            width: 70%;
+        }
+
+        .card img:hover{
+            transform: translate(0px, 0px) scale(1.1, 1.1);
+        }
+        .cart {
+            border: 1px solid #d5d1d147;
+            border-radius:30px;
+            background-color:#d5d1d147;
+            margin-top: 2%;
+            margin-left: 75%;
+            border: 1px solid #ddd;
+            background: radial-gradient(circle at 100% 100%, #ffffff 0, #ffffff 7px, transparent 7px) 0% 0%/16px 16px no-repeat,
+            radial-gradient(circle at 0 100%, #ffffff 0, #ffffff 7px, transparent 7px) 100% 0%/16px 16px no-repeat,
+            radial-gradient(circle at 100% 0, #ffffff 0, #ffffff 7px, transparent 7px) 0% 100%/16px 16px no-repeat,
+            radial-gradient(circle at 0 0, #ffffff 0, #ffffff 7px, transparent 7px) 100% 100%/16px 16px no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 18px) calc(100% - 32px) no-repeat,
+            linear-gradient(#ffffff, #ffffff) 50% 50%/calc(100% - 32px) calc(100% - 18px) no-repeat,
+            linear-gradient(18deg, #f4ffbf 0%, #94fff6 100%);
+            padding: 10px;
+            width: 300px;
+        }
+        .cart-items {
+            list-style: none;
+            padding: 0;
+        }
+        .cart-items li {
+            margin-bottom: 5px;
+        }
+        .total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <!-- First three items on the left -->
+        <ul class="nav-left">
+            <li><a href="Choco.html">Home</a></li>
+            <li><a href="Choco.html#About">About Us</a></li>
+            <li><a href="Choco.html#Contact">Contact Us</a></li>
+        </ul>
+
+        <!-- Logo in the center -->
+        <div class="logo">
+            <img src="Chocolate/ChocoLogo..png" alt="Logo">
+        </div>
+
+        <!-- Last two items on the right -->
+        <ul class="nav-right">
+            <!-- <li><a href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li> -->
+            <li><a href="Chocolate-Box.html"><i style="font-size:24px" class="fa">&#xf07a;</i></a></li>
+        </ul>
+    </nav>
+
+    <div class="BG">
+    <div class="text">
+        <h2>Watson's Chocolate</h2>
+        <h1>Create Your Own <br>
+            Chocolate Box!!</h1>
+        <button><a href="#Container">Create Now!</a></button>
+        </div>
+    </div>
+    <div class="Strip">
+        <h1>∘₊✧───Our Collection items───✧₊∘</h1>
+    </div>
+    <div class="container" id="Container">
+        <div class="card">
+            <img src="Chocolate/choco-box-1.png" alt="Velvet Bliss">
+            <h3>Velvet Bliss</h3>
+            <p>Price: 5AED</p>
+            <button onclick="addToCart('Velvet Bliss', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-2.png" alt=Midnight Truffle">
+            <h3>Midnight Truffle</h3>
+            <p>Price: 3.5AED</p>
+            <button onclick="addToCart('Midnight Truffle', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-3.png" alt="Hazelnut Dream">
+            <h3>Hazelnut Dream</h3>
+            <p>Price: 7AED</p>
+            <button onclick="addToCart('Hazelnut Dream', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-4.png" alt="Dark Cascade">
+            <h3>Dark Cascade</h3>
+            <p>Price: 2.5AED</p>
+            <button onclick="addToCart('Dark Cascade', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-5.png" alt="Golden Crunch">
+            <h3>Golden Crunch</h3>
+            <p>Price: 4.5AED</p>
+            <button onclick="addToCart('Golden Crunch', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-1.png" alt="Almond Silk">
+            <h3>Almond Silk</h3>
+            <p>Price: 1AED</p>
+            <button onclick="addToCart('Almond Silk', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-4.png" alt="Mocha Delight">
+            <h3>Mocha Delight</h3>
+            <p>Price: 10AED</p>
+            <button onclick="addToCart('Mocha Delight', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-8.png" alt="Raspberry Royale">
+            <h3>Raspberry Royale</h3>
+            <p>Price: 7.5AED</p>
+            <button onclick="addToCart('Raspberry Royale', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-9.png" alt="Honeyed Heart">
+            <h3>Honeyed Heart</h3>
+            <p>Price: 9AED</p>
+            <button onclick="addToCart('Honeyed Heart', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-10.png" alt="Coconut Swirl">
+            <h3>Coconut Swirl</h3>
+            <p>Price: 8AED</p>
+            <button onclick="addToCart('Coconut Swirl', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-13.png" alt="Vanilla Velvet">
+            <h3>Vanilla Velvet</h3>
+            <p>Price: 8.75AED</p>
+            <button onclick="addToCart('Vanilla Velvet', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-14.png" alt="Chocolate Velvet">
+            <h3>Chocolate Velvet</h3>
+            <p>Price: 9.75AED</p>
+            <button onclick="addToCart('Chocolate Velvet', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-3.png" alt="Peanut Butter Fusion">
+            <h3>Peanut Butter Fusion</h3>
+            <p>Price: 10AED</p>
+            <button onclick="addToCart('Peanut Butter Fusion', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-12.png" alt="Ruby Bite">
+            <h3>Ruby Bite</h3>
+            <p>Price: 6.5AED</p>
+            <button onclick="addToCart('Ruby Bite', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-5.png" alt="Citrus">
+            <h3>Citrus</h3>
+            <p>Price: 7.5AED</p>
+            <button onclick="addToCart('Citrus', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-14.png" alt="Cherry Temptation">
+            <h3>Cherry Temptation</h3>
+            <p>Price: 4.5AED</p>
+            <button onclick="addToCart('Cherry Temptation', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/choco-box-9.png" alt="Espresso Burst">
+            <h3>Espresso Burst</h3>
+            <p>Price: 3.5AED</p>
+            <button onclick="addToCart('Espresso Burst', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+
+        <div class="card">
+            <img src="Chocolate/choco-box-13.png" alt="Milk Wave">
+            <h3>Milk Wave</h3>
+            <p>Price: 4.5AED</p>
+            <button onclick="addToCart('Milk Wave', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/Donuts.png" alt="Watson's Special Donuts">
+            <h3>Watson's Special Donuts</h3>
+            <p>Price: 120AED</p>
+            <button onclick="addToCart('Watsons Special Donuts', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/Eclair.png" alt="Watson's Special Echlair">
+            <h3>Watson's Special Echlair</h3>
+            <p>Price: 30AED</p>
+            <button onclick="addToCart('Watsons Special Echlair', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+        <div class="card">
+            <img src="Chocolate/chocolate-cake.png" alt="Watson's Special Echlair">
+            <h3>Watson's Special Cake</h3>
+            <p>Price: 55AED</p>
+            <button onclick="addToCart('Watsons Special Cake', 10)"><i style="font-size:18px" class="fa">&#xf067;</i></button>
+        </div>
+
+
+    </div>
+
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul class="cart-items" id="cartItems"></ul>
+        <p class="total">Total: AED<span id="totalAmount">0</span></p>
+    </div>
+
+    <script>
+        let total = 0;
+
+        function addToCart(item, price) {
+            const cartItems = document.getElementById('cartItems');
+            const li = document.createElement('li');
+            li.textContent = `${item} - $${price}`;
+            cartItems.appendChild(li);
+
+            // Update total price
+            total += price;
+            document.getElementById('totalAmount').textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

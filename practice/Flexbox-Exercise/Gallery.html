@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  position: relative; 
+  z-index: 1;
+         background: linear-gradient(
+            45deg,
+           hsl(205deg 19% 70%) 1%,
+           hsl(209deg 17% 59%) 42%,
+           hsl(215deg 16% 48%) 49%,
+           hsl(220deg 23% 39%) 51%,
+           hsl(228deg 33% 31%) 51%,
+           hsl(240deg 42% 23%) 50%,
+           hsl(228deg 33% 31%) 49%,
+           hsl(220deg 23% 39%) 49%,
+           hsl(215deg 15% 50%) 51%,
+           hsl(210deg 18% 65%) 58%,
+           hsl(206deg 23% 81%) 99%
+         );
+         background-size: 400% 400%;
+         width: 100%;
+         animation: animate 5s ease infinite;
+      }
+
+      @keyframes animate {
+         0% {
+            background-position: 0% 50%;
+         }
+         50% {
+            background-position: 100% 50%;
+         }
+         100% {
+            background-position: 0% 50%;
+         }
+}
+
+.header {
+    color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 20px;
+  padding: 32px;
+  position: relative; 
+  z-index: 1; 
+  text-shadow: 1px 2px 8px rgba(255, 253, 253, 0.866);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+align-items: center;
+  position: relative; 
+  z-index: 1; 
+}
+
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding-left: 23px;
+}
+
+.column img {
+  margin-top: 12px;
+  vertical-align: middle;
+  width: 250px; 
+  height: 290px; 
+  border-radius: 13px;
+  border: 1px solid #ffffff2f;
+  transition: transform 300ms ease-out;
+}
+
+.column img:hover{
+  transform: translate(0px, 0px) scale(1.1, 1.1);
+}
+
+
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+
+<div class="header">
+    <h1>Building Masterpieces</h1>
+    <p>Discover the beauty and innovation of modern architecture.</p>    
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <img src="Gallery/img-1.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-2.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-3.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-4.avif" style="width:250px; height:290px;">
+    <img src="Gallery/img-5.avif" style="width:250px; height:290px;">
+    <img src="Gallery/img-6.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-7.avif" style="width:250px; height:290px;">
+    <img src="Gallery/img-18.jpg" style="width:250px; height:290px;">
+  </div>
+  
+  <div class="column">
+    <img src="Gallery/img-8.avif" style="width:250px; height:290px;">
+    <img src="Gallery/img-9.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-10.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-11.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-12.avif" style="width:250px; height:290px;">
+    <img src="Gallery/img-13.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-14.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-16.jpg" style="width:250px; height:290px;">
+  </div> 
+   
+  <div class="column">
+    <img src="Gallery/img-15.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-16.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-17.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-18.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-19.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-20.webp" style="width:250px; height:290px;">
+    <img src="Gallery/img-21.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-4.avif" style="width:250px; height:290px;">
+  </div>
+  
+  <div class="column">
+    <img src="Gallery/img-23.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-22.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-9.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-11.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-12.avif" style="width:250px; height:290px;">
+    <img src="Gallery/img-8.avif" style="width:250px; height:290px;">
+    <img src="Gallery/img-9.jpg" style="width:250px; height:290px;">
+    <img src="Gallery/img-10.jpg" style="width:250px; height:290px;">
+  </div>
+</div>
+
+</body>
+</html>

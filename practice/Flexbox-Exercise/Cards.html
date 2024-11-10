@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+      * {
+         box-sizing: border-box;
+         margin: 0;
+      }
+
+      .main-container {
+         z-index: 1;
+         background: linear-gradient(
+            -45deg,
+            hsl(0, 0%, 19%) 0%,
+            hsl(0, 0%, 24%) 8%,
+            hsl(0deg 0% 18%) 17%,
+            hsl(0deg 0% 22%) 25%,
+            hsl(0deg 1% 29%) 33%,
+            hsl(0deg 1% 35%) 42%,
+            hsl(0deg 1% 41%) 50%,
+            hsl(0deg 1% 52%) 58%,
+            hsl(0deg 0% 62%) 67%,
+            hsl(0deg 0% 70%) 75%,
+            hsl(0deg 0% 81%) 83%,
+            hsl(0deg 0% 91%) 92%,
+            hsl(0, 1%, 74%) 100%
+         );
+         background-size: 400% 400%;
+         width: 100%;
+         overflow: hidden;
+         animation: animate 10s ease infinite;
+      }
+
+      @keyframes animate {
+         0% {
+            background-position: 0% 50%;
+         }
+         50% {
+            background-position: 100% 50%;
+         }
+         100% {
+            background-position: 0% 50%;
+         }
+      }
+
+      a{
+        color: rgb(159, 159, 161);
+         font-size: 30px;
+         text-decoration: none;
+      }
+
+      h1 {
+         color: rgb(0, 0, 0);
+         font-size: 50px;
+         text-align: center;
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: column-reverse;
+         margin-top: 35px;
+      }
+
+    @media screen and (max-width: 1020px) {
+        h1 {
+            display: none;
+        }
+    }
+
+
+      img {
+         display: block;
+         max-width: 100%;
+         height: auto;
+      }
+
+      .container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         margin-inline: 1.5rem;
+         margin-top: -40px;
+      }
+
+      .card__container {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 3.5rem;
+      }
+
+      .card__article {
+         position: relative;
+         overflow: hidden;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
+
+      .card__img {
+         width: 450px !important;
+         border-radius: 1.5rem;
+      }
+
+      .card__data {
+         width: 280px;
+         background-color: hsl(0, 0%, 100%);
+         padding: 1.5rem 2rem;
+         box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+         border-radius: 1rem;
+         position: absolute;
+         bottom: -9rem;
+         left: 0;
+         right: 0;
+         margin-inline: auto;
+         opacity: 0;
+         transition: opacity 1s 1s;
+      }
+
+      .card__description {
+         display: block;
+         font-size: .813rem;
+         margin-bottom: .25rem;
+      }
+
+      .card__title {
+         font-size: 1.25rem;
+         font-weight: 500;
+         color: hsl(0, 0%, 15%);
+         margin-bottom: .75rem;
+      }
+
+      .card__button {
+         text-decoration: none;
+         font-size: .813rem;
+         font-weight: 500;
+         color: hsl(226, 65%, 35%);
+      }
+
+      .card__button:hover {
+         text-decoration: underline;
+      }
+
+      .card__article:hover .card__data {
+         animation: show-data 1s forwards;
+         opacity: 1;
+         transition: opacity .3s;
+      }
+
+      .card__article:hover {
+         animation: remove-overflow 2s forwards;
+      }
+
+      .card__article:not(:hover) {
+         animation: show-overflow 2s forwards;
+      }
+
+      .card__article:not(:hover) .card__data {
+         animation: remove-data 1s forwards;
+      }
+
+      @keyframes show-data {
+         50% {
+            transform: translateY(-10rem);
+         }
+         100% {
+            transform: translateY(-7rem);
+         }
+      }
+
+      @keyframes remove-overflow {
+         to {
+            overflow: initial;
+         }
+      }
+
+      @keyframes remove-data {
+         0% {
+            transform: translateY(-7rem);
+         }
+         50% {
+            transform: translateY(-10rem);
+         }
+         100% {
+            transform: translateY(.5rem);
+         }
+      }
+
+      @keyframes show-overflow {
+         0% {
+            overflow: initial;
+            pointer-events: none;
+         }
+         50% {
+            overflow: hidden;
+         }
+      }
+
+      @media screen and (max-width: 340px) {
+         .container {
+            margin-inline: 1rem;
+         }
+
+         .card__data {
+            width: 250px;
+            padding: 1rem;
+         }
+      }
+
+      @media screen and (min-width: 768px) {
+         .card__container {
+            gap: 1.5rem;
+         }
+      }
+
+      @media screen and (min-width: 1120px) {
+         .container {
+            height: 100vh;
+         }
+
+         .card__img {
+            width: 348px;
+         }
+
+         .card__data {
+            width: 316px;
+            padding-inline: 2.5rem;
+         }
+      }
+   </style>
+   <title>Cards</title>
+</head>
+<body>
+
+   <div class="main-container">
+    <h1 class="h1">Top Expensive Cars in the world</h1>
+      <div class="container">
+         <div class="card__container">
+            <article class="card__article">
+               <img src="Cards/car-1.png" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Koenigsegg Gemera</h2>
+                  <span class="card__description">The Koenigsegg Gemera is a hybrid in more ways than one. It's a hybrid in the sense that it relies on three electric motors and a twin-turbo 2.0-liter I-3 to pump out a total of 1,677 hp.</span>
+                  <a href="#" class="card__button">Read More</a>
+               </div>
+            </article>
+
+            <article class="card__article">
+               <img src="Cards/car-2.png" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Hennessey Venom F5</h2>
+                  <span class="card__description">Hennessey continues to prove it's more than just a tuner of American muscle cars with the high-priced Venom F5.</span>
+                  <a href="#" class="card__button">Read More</a>
+               </div>
+            </article>
+
+            <article class="card__article">
+               <img src="Cards/car-3.png" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Lotus Evija</h2>
+                  <span class="card__description">The future of Lotus is electric, and the upcoming Evija is set to usher it in. Fit with four electric motors that produce a total of 1,972 hp, the costly $2,100,000 Evija reportedly accelerates to 186 mph from a standstill in a mere 8.6 seconds.</span>
+                  <a href="#" class="card__button">Read More</a>
+               </div>
+            </article>
+
+            <article class="card__article">
+               <img src="Cards/car-4.png" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">McLaren Speedtail</h2>
+                  <span class="card__description">Take the insane, performance-oriented nature of the legendary McLaren F1, add in a skosh of the Volkswagen XL1's efficiency-focused design, and voilà, you've got yourself the essence of the McLaren Speedtail.</span>
+                  <a href="#" class="card__button">Read More</a>
+               </div>
+            </article>
+
+            <article class="card__article">
+               <img src="Cards/car-5.png" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Bugatti Chiron</h2>
+                  <span class="card__description">How serious is Bugatti about making ultra-expensive hypercars? Serious enough that its entry-level model, the Chiron, starts at a whopping $2,998,000.</span>
+                  <a href="#" class="card__button">Read More</a>
+               </div>
+            </article>
+
+            <article class="card__article">
+               <img src="Cards/car-6.png" alt="image" class="card__img">
+
+               <div class="card__data">
+                  <h2 class="card__title">Aston Martin Valkyrie</h2>
+                  <span class="card__description">Aston Martin's Valkyrie looks to challenge the Mercedes-AMG One once deliveries of the British hypercar begin—likely before the end of the year.</span>
+                  <a href="#" class="card__button">Read More</a>
+               </div>
+            </article>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
