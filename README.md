@@ -1,4 +1,4 @@
-# Web-Dev-||-_SA-1_Clone-Tasks
+# Web-Dev-||_SA-1_Clone-Tasks
 For our Web-Development-II first assessment, we were tasked with cloning two websites along with their corresponding wireframes as provided to us.
 
 First Task: "Responsive Layout and Typography" 
