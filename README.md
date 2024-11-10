@@ -1,4 +1,4 @@
-# Web-Dev-||-_SA-1_Clone-Tasks
+# Web-Dev-||-SA-1_Clone-Tasks
 For our Web-Development-II first assessment, we were tasked with cloning two websites along with their corresponding wireframes as provided to us.
 
 First Task: "Responsive Layout and Typography" 
@@ -28,4 +28,4 @@ Practice folder containes:
 - Grids folder that contains websites made by focusing on the Grids properties  
 - RWD-website which is a folder contains a website made by following a course in the Linked-In
 Linked In course: https://www.linkedin.com/learning/creating-a-responsive-web-design-advanced-techniques/introduction-to-this-course?u=42543748 
-- Guide.html whic is a guide to the html tags
+- Guide.html which is a guide to the html tags
