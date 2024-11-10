@@ -62,11 +62,12 @@ header ul li nav li:first-child {
   font-family: "Teko", sans-serif;
   font-size: 2em;
   background: #4dccbd;
-  border: 0.1px solid #4dccbd;
+  border: 0.1px solid #231651;
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: auto;
+  border-radius: 15px;
 }
 
 .Card button:hover {
@@ -75,10 +76,11 @@ header ul li nav li:first-child {
 
 header ul li button {
   font-family: "Teko", sans-serif;
-  border: 0.1px solid #4dccbd;
+  border: 0.1px solid #231651;
   padding: 8px 16px;
   width: 150px;
   background-color: #4dccbd;
+  border-radius: 15px;
 }
 
 .Card-Container {

@@ -5,11 +5,12 @@
     font-family: 'Teko', sans-serif;
     font-size: $Button-font-size;
     background: $primary-light;
-    border: .1px solid $primary-light;
+    border: .1px solid $primary-dark;
     padding: 8px 16px;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: auto;
+    border-radius: 15px;
 }
 
 // hover effect
@@ -20,8 +21,9 @@
 // Designing the button in the navigation bar
 header ul li button {
     font-family: 'Teko', sans-serif;
-    border: .1px solid $primary-light;
+    border: .1px solid $primary-dark;
     padding: 8px 16px;
     width: 150px;
     background-color:$primary-light;
+    border-radius: 15px;
 }
