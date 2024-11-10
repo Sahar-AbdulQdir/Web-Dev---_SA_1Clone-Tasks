@@ -22,3 +22,10 @@ The "Clone Task Two" folder contains:
 - A partials folder containing SCSS partials  
 - A main Sass file  
 - A CSS file  
+
+Practice folder containes:
+- Flex-Box folder that contains websites made by focusing on the FlexBox properties  
+- Grids folder that contains websites made by focusing on the Grids properties  
+- RWD-website which is a folder contains a website made by following a course in the Linked-In
+Linked In course: https://www.linkedin.com/learning/creating-a-responsive-web-design-advanced-techniques/introduction-to-this-course?u=42543748 -->
+- Guide.html whic is a guide to the html tags
